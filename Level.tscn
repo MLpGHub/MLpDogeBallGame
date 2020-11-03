@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 15, 1, 15 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 30, 2, 30 )
+
+[node name="Level" type="Spatial"]
+
+[node name="Box" type="RigidBody" parent="."]
+transform = Transform( 0.69889, -0.226544, 0.678403, 0.47568, 0.855554, -0.204344, -0.534118, 0.465517, 0.7057, 0, 6.03627, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box"]
+transform = Transform( 0.919771, -0.121396, -0.373208, -0.00758432, 0.945281, -0.32617, 0.392383, 0.302832, 0.868521, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Box2" type="RigidBody" parent="."]
+transform = Transform( 0.69889, -0.226544, 0.678403, 0.47568, 0.855554, -0.204344, -0.534118, 0.465517, 0.7057, -0.930375, 9.54988, 1.91179 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box2"]
+transform = Transform( 0.919771, -0.121396, -0.373208, -0.00758432, 0.945281, -0.32617, 0.392383, 0.302832, 0.868521, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Box3" type="RigidBody" parent="."]
+transform = Transform( 0.628752, 0.380052, 0.678403, -0.335403, 0.919646, -0.204344, -0.701552, -0.0990568, 0.7057, 1.28512, 9.14599, -0.334954 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box3"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box3"]
+transform = Transform( 0.919771, -0.121396, -0.373208, -0.00758432, 0.945281, -0.32617, 0.392383, 0.302832, 0.868521, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.00338074, -0.0940915, 0.995558, 0.000626699, 0.995564, 0.0940899, -0.999994, 0.000305821, 0.00342471, 10.4749, 2.4572, -0.977305 )
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 4 )
+material/0 = null
