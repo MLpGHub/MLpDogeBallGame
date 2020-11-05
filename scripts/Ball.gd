@@ -4,6 +4,7 @@ extends KinematicBody
 var coinCounter
 var velocity = Vector3(0,0,0)
 const SPEED = 10
+const ROTATESPEED = 6.5
 
 func _ready():
 	pass
@@ -13,16 +14,20 @@ func _physics_process(delta):
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
+		$MeshInstance.rotate_z(deg2rad(-ROTATESPEED))
 	elif Input.is_action_pressed("ui_left"):	
 		velocity.x = -SPEED
+		$MeshInstance.rotate_z(deg2rad(ROTATESPEED))
 	else:
 		velocity.x = lerp(velocity.x,0,0.1)
 	if Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_down"):
 		velocity.z = 0
 	elif Input.is_action_pressed("ui_up"):
 		velocity.z = -SPEED
+		$MeshInstance.rotate_x(deg2rad(-ROTATESPEED))
 	elif Input.is_action_pressed("ui_down"):	
 		velocity.z = SPEED
+		$MeshInstance.rotate_x(deg2rad(ROTATESPEED))
 	else:
 		velocity.z = lerp(velocity.z,0,0.1)
 	#TODO Gravity is within the (velocity) by using (velocity, ... ) 
