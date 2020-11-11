@@ -33,3 +33,12 @@ func _physics_process(delta):
 	#TODO Gravity is within the (velocity) by using (velocity, ... ) 
 	move_and_slide(velocity)
 	
+
+
+func _on_enemy_body_entered(body):
+	if body.name == "Ball":
+		get_tree().change_scene("res://GameOver.tscn")
+
+
+func _on_enemy_2_body_entered(body):
+	pass # Replace with function body.
