@@ -1,3 +1,4 @@
+
 extends KinematicBody
 
 #var playerName ="MLpGolfBall"
@@ -32,9 +33,8 @@ func _physics_process(delta):
 		velocity.z = lerp(velocity.z,0,0.1)
 	#TODO Gravity is within the (velocity) by using (velocity, ... ) 
 	move_and_slide(velocity)
-	
-
 
 func _on_enemy_body_entered(body):
 	if body.name == "Ball":
-		get_tree().change_scene("res://GameOver.tscn")
+		get_tree().change_scene("res://scenes/GameOver.tscn")
+
