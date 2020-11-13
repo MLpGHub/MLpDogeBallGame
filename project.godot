@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MLpDogeBallGame"
-run/main_scene="res://Level.tscn"
+run/main_scene="res://scenes/Level.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -62,4 +62,4 @@ press_spacebar={
 
 [rendering]
 
-environment/default_environment="res://New_Enviroment.tres"
+environment/default_environment="res://assets/enviroments/New_Enviroment.tres"
