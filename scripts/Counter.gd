@@ -9,7 +9,7 @@ func _ready():
 func _on_coin_coinCollected():
 	coinsCounter = coinsCounter + 1
 	_ready()
-	if coinsCounter == 2:
+	if coinsCounter == 20:
 			$Timer.start()
 func _on_Timer_timeout():
 	get_tree().change_scene("res://scenes/YouWinScreen.tscn")
