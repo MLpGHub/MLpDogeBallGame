@@ -2,7 +2,6 @@
 
 [ext_resource path="res://scripts/PressMeter.gd" type="Script" id=1]
 
-
 [node name="PressMeter" type="Node2D"]
 position = Vector2( 354, 303 )
 script = ExtResource( 1 )
