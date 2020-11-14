@@ -1,3 +1,14 @@
 # MLpDogeBallGame
 
-Basic Game is finished. More Enemys to add + check collision Function
+
+![MLpDogeBallGameExample]()
+
+This game is optimized for PC-Versions.
+
+
+Pre-compile Versions for Windows, Linux and Android can be fund here: 
+
+Have fun playing!
+
+
+Except from adding a rotation animation no further development is planned. 
